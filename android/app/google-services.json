@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "199713758586",
+    "project_id": "papsas-ac372",
+    "storage_bucket": "papsas-ac372.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:199713758586:android:053338cb19808d6fa30ac3",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhnEXufWhwCw3ReT3GfqcnM-4uquKZKnw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
