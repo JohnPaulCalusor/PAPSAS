@@ -95,7 +95,7 @@ This project follows **Agile development principles**:
 - **Stakeholder Collaboration**: Weekly reviews with PAPSAS representatives
 - **Iterative Improvement**: User feedback incorporated in each sprint
 
-### 📱 Screenshots
+### 📱 Preview
 
 | Screen | Description |
 |--------|-------------|
