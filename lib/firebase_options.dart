@@ -17,19 +17,13 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
         return android;
       case TargetPlatform.iOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for ios - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return ios;
       case TargetPlatform.macOS:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for macos - '
@@ -52,11 +46,30 @@ class DefaultFirebaseOptions {
     }
   }
 
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyAWFf_5LNc8nC3a56qH7ZpiO-BjKsdt4rQ',
+    appId: '1:199713758586:web:32d5b6d02914e543a30ac3',
+    messagingSenderId: '199713758586',
+    projectId: 'papsas-ac372',
+    authDomain: 'papsas-ac372.firebaseapp.com',
+    storageBucket: 'papsas-ac372.firebasestorage.app',
+    measurementId: 'G-DRB97XVEY4',
+  );
+
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyAhnEXufWhwCw3ReT3GfqcnM-4uquKZKnw',
     appId: '1:199713758586:android:053338cb19808d6fa30ac3',
     messagingSenderId: '199713758586',
     projectId: 'papsas-ac372',
     storageBucket: 'papsas-ac372.firebasestorage.app',
+  );
+
+  static const FirebaseOptions ios = FirebaseOptions(
+    apiKey: 'AIzaSyDPzJb-72jC1Bi0JxBMU3xx7aVogPkokyA',
+    appId: '1:199713758586:ios:68d79156c3b8ede3a30ac3',
+    messagingSenderId: '199713758586',
+    projectId: 'papsas-ac372',
+    storageBucket: 'papsas-ac372.firebasestorage.app',
+    iosBundleId: 'com.example.flutterApplication1',
   );
 }

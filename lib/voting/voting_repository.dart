@@ -1,24 +1,28 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import '../common/models.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class VotingRepository {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
-  Future<List<Candidate>> getCandidates() async {
-    QuerySnapshot snapshot = await _firestore.collection('candidates').get();
-    return snapshot.docs.map((doc) => Candidate.fromFirestore(doc)).toList();
+  Future<bool> hasVoted(String userId) async {
+    try {
+      final snapshot = await _firestore.collection('votes').where('userId', isEqualTo: userId).get();
+      print('hasVoted query result for $userId: ${snapshot.docs.length} documents'); // Debug log
+      return snapshot.docs.isNotEmpty;
+    } catch (e) {
+      print('Error checking vote status for $userId: $e');
+      return false; // Allow voting if query fails (e.g., quota exceeded)
+    }
   }
 
-  Future<List<Vote>> getVotes() async {
-    QuerySnapshot snapshot = await _firestore.collection('votes').get();
-    return snapshot.docs.map((doc) => Vote.fromFirestore(doc)).toList();
-  }
-
-  Future<void> addVote(String voterEmail, String candidateId) async {
+  Future<void> castVote(String candidateId, String region) async {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user == null) throw Exception('User not logged in');
     await _firestore.collection('votes').add({
-      'voterEmail': voterEmail,
+      'userId': user.uid,
       'candidateId': candidateId,
-      'timestamp': FieldValue.serverTimestamp(),
+      'region': region,
+      'timestamp': Timestamp.now(),
     });
   }
 }

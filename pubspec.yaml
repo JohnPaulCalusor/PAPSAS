@@ -33,6 +33,10 @@ dependencies:
 
   cupertino_icons: ^1.0.6
 
+  carousel_slider: ^4.2.1
+
+  video_player: ^2.8.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -44,4 +48,27 @@ flutter:
 
   uses-material-design: true
 
-  
+  assets:
+    - assets/images/papsas_logo.png
+    - assets/images/conference_1.jpg
+    - assets/images/conference_2.jpg
+    - assets/images/conference_3.jpg
+    - assets/images/adelaida_fronda.jpg
+    - assets/images/evelyn_songco.jpg
+    - assets/images/vincent_alcantara.jpg
+    - assets/images/jefferson_canada.jpg
+    - assets/images/rodolfo_virtus.jpg
+    - assets/images/jun_tayaben.jpg
+    - assets/images/edna_calingacion.jpg
+    - assets/images/renelyn_salcedo.jpg
+    - assets/images/alice_carter.jpg
+    - assets/images/david_evans.jpg
+    - assets/images/maria_flores.jpg
+    - assets/images/thomas_grant.jpg
+    - assets/images/oliver_hayes.jpg
+
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
