@@ -33,7 +33,6 @@ This application modernizes PAPSAS's election process by replacing traditional G
 - **Offline Capability**: Vote even with limited connectivity (syncs when connection is restored)
 
 ### 📱 Cross-Platform Support
-- **iOS Compatibility**: Supports iOS 12 and above
 - **Android Support**: Compatible with Android 12 and higher
 - **Responsive Design**: Optimized for various screen sizes and orientations
 
@@ -54,7 +53,7 @@ This application modernizes PAPSAS's election process by replacing traditional G
 ### Prerequisites
 - Flutter SDK 3.x or higher
 - Android Studio / VS Code
-- iOS Simulator (for iOS testing) or Android Emulator
+- Android Emulator
 - Firebase account and project setup
 
 ### Setup Steps
@@ -74,7 +73,7 @@ This application modernizes PAPSAS's election process by replacing traditional G
    flutter pub get
 
 3. **Firebase Configuration**
-    Add your google-services.json (Android) and GoogleService-Info.plist (iOS)
+    Add your google-services.json (Android)
     Configure Firebase Authentication and Firestore rules
 
 4. **Run the Application**
@@ -82,7 +81,6 @@ This application modernizes PAPSAS's election process by replacing traditional G
    flutter run
 
 ### System Requirements
-- **iOS**: Version 12.0 or higher
 - **Android**: API level 32 (Android 12) or higher
 - **RAM**: Minimum 2GB recommended
 - **Storage**: 100MB free space
@@ -107,8 +105,8 @@ This project follows **Agile development principles**:
 
 ### 🧪 Testing
 **User Acceptance Testing (UAT)**
-- **Environment**: iOS and Android devices
-- **Minimum OS**: Android 12+, iOS 12+
+- **Environment**: Android devices
+- **Minimum OS**: Android 12+
 - **Version Tested**: 1.0.0+1
 - **Testing Method**: Manual user testing with real PAPSAS members
 - **Test Coverage**: Authentication, voting flow, result viewing, and profile management
@@ -123,3 +121,4 @@ This project follows **Agile development principles**:
 **Academic Supervision**
 - **Mr. Jhon Glenn L. Manalo** - Project Instructor
 - **Mr. Edbert Ocampo** - Project Instructor
+- **Mr. Adrian Balmes** - Project Instructor
